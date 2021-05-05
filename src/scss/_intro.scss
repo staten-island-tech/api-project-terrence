@@ -1,0 +1,42 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+#intro {
+  width: 100vw;
+  height: 100vh;
+  @include flex-col-center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, #c04848, #480048);
+  position: absolute;
+  z-index: 1;
+}
+
+#searchbar {
+  height: 5rem;
+  width: 30rem;
+  padding-left: 1rem;
+}
+
+#icon-box {
+  width: 30rem;
+  position: absolute;
+  bottom: 5rem;
+  @include flex-col-center;
+}
+
+.icon-down {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.fas {
+  font-size: 5rem;
+  color: #fff;
+  animation: bounce 2s infinite;
+}
+
+.fas:hover {
+  animation: none;
+  transform: scale(1.25);
+}
