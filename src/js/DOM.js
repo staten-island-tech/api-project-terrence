@@ -1,7 +1,6 @@
 const DOMSelectors = {
-  iconButton: document.getElementById("down-button"),
   introPage: document.getElementById("intro"),
-  listPage: document.getElementById("list"),
+  championBox: document.getElementById("champion-box"),
 };
 
 export { DOMSelectors };
