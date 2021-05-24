@@ -1,7 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-#intro {
+#front {
   width: 100vw;
   height: 100vh;
   @include flex-col-center;
@@ -36,11 +36,38 @@
   flex: 0 0 24.85%;
   height: 37.52vh;
   color: white;
-  font-size: 3rem;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   border: 1px solid black;
   @include flex-col-center;
+  justify-content: flex-end;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+#championTitle {
+  position: relative;
+  font-size: 3rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  transition: all ease 0.5s;
+  top: 50px;
+}
+
+#class {
+  font-size: 2rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#box:hover {
+  opacity: 80%;
+}
+
+#box:hover #championTitle {
+  transform: translateY(-200px);
+  margin: 0;
+}
+
+#box:hover #class {
+  opacity: 1;
 }

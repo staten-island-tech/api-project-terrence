@@ -1,6 +1,9 @@
 const DOMSelectors = {
-  introPage: document.getElementById("intro"),
+  introPage: document.getElementById("front"),
   allChampionBox: document.getElementById("champion-box"),
+  searchBar: document.getElementById("searchbar"),
 };
 
-export { DOMSelectors };
+let allChampions = [];
+
+export { DOMSelectors, allChampions };
