@@ -7,3 +7,19 @@ body {
   margin: 0;
   font-size: 62.5%;
 }
+
+@media only screen and (max-width: 1476px) {
+  #box {
+    flex: 0 0 33%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #box {
+    flex: 0 0 49.6%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #box {
+    flex: 0 0 100%;
+  }
+}

@@ -7,21 +7,25 @@ async function query() {
     );
     const data = await getData.json();
     const list = data.data;
-    // const hi = list.Aatrox.tags;
-    Object.keys(list).forEach((champion) => {
+    const newList = Object.keys(list);
+    // Creates new array from data
+    const pretty = newList.splice(75, 1)[0];
+    newList.splice(141, 0, pretty);
+    // QOL change because some champions weren't in alphabetical order
+    newList.forEach((champion) => {
       // Repeat until all champions are done
-      allChampions.push(champion.toLowerCase());
+      allChampions.push(list[champion].name.toLowerCase());
       // Pushes champion to array
       const newBox = document.createElement("div");
       newBox.id = "box";
-      newBox.className += `${champion.toLowerCase()}`;
+      newBox.className += `${list[champion].name.toLowerCase()}`;
       newBox.style.backgroundImage = `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_0.jpg)`;
-      newBox.alt = `${champion} picture`;
+      newBox.setAttribute("alt", `${champion} picture`);
       // Creates new box based on champion
       const element = document.createElement("h1");
       newBox.appendChild(element);
       element.id = "championTitle";
-      element.innerText = champion;
+      element.innerText = `${list[champion].name}`;
       // Creates h1 element to house champion title
       const anotherElement = document.createElement("h2");
       anotherElement.id = "class";
@@ -43,5 +47,4 @@ async function query() {
     console.log("Something went wrong");
   }
 }
-
 export { query };
